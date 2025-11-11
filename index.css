@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4ff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ENCABEZADO */
+.header {
+  background: #4caf50; /* verde suave */
+  padding: 25px;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 0;
+  height: 100%;
+}
+
+/* COLUMNAS */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.left-column {
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.right-column {
+  align-items: flex-end;
+  padding-right: 20px;
+}
+
+/* TÍTULOS DE COLUMNA */
+.column-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4caf50; /* verde suave */
+  text-align: center;
+}
+
+/* ENLACES CON ICONOS Y DESCRIPCIÓN */
+.item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0c8178;
+  border: 2px solid #cdd7ff;
+  transition: 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item:hover {
+  background: #ff4d4d; /* rojo al pasar el ratón */
+  border-color: #ff1a1a;
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.item .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.item-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.item-desc {
+  font-size: 0.9rem;
+  color: #213547;
+  margin-top: 5px;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+  text-align: center;
+  color: white;
+  padding: 25px;
+  background: linear-gradient(90deg, #4caf50, #1f4aff); /* degradado verde a azul */
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .socials a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+
+.footer .socials a:hover {
+  color: #dbe4ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .left-column, .right-column {
+    align-items: center;
+  }
+  .item {
+    width: 80%;
+  }
+}
